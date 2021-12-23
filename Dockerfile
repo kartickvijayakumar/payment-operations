@@ -11,9 +11,10 @@ RUN gem install bundler -v 2.1.2
 
 RUN yum install -y make gcc-c++ sudo
 
-RUN mkdir /payment_operations
-WORKDIR /payment_operations
-ADD . /payment_operations
+RUN mkdir /payment-operations
+WORKDIR /payment-operations
+ADD . /payment-operations
 
 RUN bundle install
-CMD /payment_operations/run.sh
+EXPOSE 80
+CMD /payment-operations/run.sh

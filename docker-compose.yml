@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/payment_operations
     ports:
-      - "90:90" # make this 80:80
+      - "80:80"
   pg:
     image: postgres:14
     ports:
